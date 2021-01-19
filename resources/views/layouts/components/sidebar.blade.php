@@ -8,19 +8,19 @@
     </svg>
     </div>
     <ul class="c-sidebar-nav">
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin')}}">
         <svg class="c-sidebar-nav-icon">
             <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-speedometer')}}"></use>
         </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
-    <li class="c-sidebar-nav-title">Theme</li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+    <li class="c-sidebar-nav-title">Data Master</li>
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin/provinsi')}}">
         <svg class="c-sidebar-nav-icon">
             <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
-        </svg> Colors</a></li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+        </svg> Provinsi</a></li>
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin/kota')}}">
         <svg class="c-sidebar-nav-icon">
             <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-pencil')}}"></use>
-        </svg> Typography</a></li>
+        </svg> Kota</a></li>
     <li class="c-sidebar-nav-title">Components</li>
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
         <svg class="c-sidebar-nav-icon">
