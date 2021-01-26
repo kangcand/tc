@@ -5,20 +5,20 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Show Data Kecamatan
+                    Show Data kelurahan
                 </div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="">Kota / Kabupaten</label>
-                        <input type="text" name="kode_kota" value="{{$kecamatan->kota->nama_kota}}" class="form-control" readonly>
+                        <label for="">Kecamatan</label>
+                        <input type="text" name="kode_kecamatan" value="{{$kelurahan->kecamatan->nama_kecamatan}}" class="form-control" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label for="">Nama kecamatan</label>
-                        <input type="text" name="nama_kecamatan" value="{{$kecamatan->nama_kecamatan}}" class="form-control" readonly>
+                        <label for="">Nama kelurahan</label>
+                        <input type="text" name="nama_kelurahan" value="{{$kelurahan->nama_kelurahan}}" class="form-control" readonly>
                     </div>
                     <div class="form-group">
-                        <a href="{{route('kecamatan.index')}}" class="btn btn-primary btn-block">Kembali</a>
+                        <a href="{{route('kelurahan.index')}}" class="btn btn-primary btn-block">Kembali</a>
                     </div>
                 </div>
             </div>
