@@ -5,8 +5,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Data Provinsi
-                    <a href="{{route('provinsi.create')}}"
+                    Data Kecamatan
+                    <a href="{{route('kecamatan.create')}}"
                        class="btn btn-primary float-right">
                         Tambah
                     </a>
@@ -16,22 +16,22 @@
                         <table class="table">
                             <tr>
                                 <th>No</th>
-                                <th>Kode Provinsi</th>
-                                <th>Provinsi</th>
+                                <th>Kecamatan</th>
+                                <th>Kota / Kabupaten</th>
                                 <th>Aksi</th>
                             </tr>
                             @php $no=1; @endphp
-                            @foreach($provinsi as $data)
+                            @foreach($kecamatan as $data)
                             <tr>
                                 <td>{{$no++}}</td>
-                                <td>{{$data->kode_provinsi}}</td>
-                                <td>{{$data->nama_provinsi}}</td>
+                                <td>{{$data->nama_kecamatan}}</td>
+                                <td>{{$data->kota->nama_kota}}</td>
                                 <td>
-                                    <form action="{{route('provinsi.destroy',$data->id)}}" method="post">
+                                    <form action="{{route('kecamatan.destroy',$data->id)}}" method="post">
                                         @method('delete')
                                         @csrf
-                                        <a href="{{route('provinsi.edit',$data->id)}}" class="btn btn-success">Edit</a>
-                                        <a href="{{route('provinsi.show',$data->id)}}" class="btn btn-warning">Show</a>
+                                        <a href="{{route('kecamatan.edit',$data->id)}}" class="btn btn-success">Edit</a>
+                                        <a href="{{route('kecamatan.show',$data->id)}}" class="btn btn-warning">Show</a>
                                         <button type="submit" class="btn btn-danger" onclick="return confirm('apakah anda yakin ?')">Delete</button>
                                     </form>
                                 </td>

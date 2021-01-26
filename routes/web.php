@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProvinsiController;
+use App\Http\Controllers\KotaController;
+use App\Http\Controllers\KecamatanController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,9 +18,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>['auth']],function () {
         {
             return view('admin.index');
         });
-
-        Route::get('provinsi',function()
-        {
-            return view('admin.provinsi.index');
-        });
+        Route::resource('provinsi', ProvinsiController::class);
+        Route::resource('kota', KotaController::class);
+        Route::resource('kecamatan', KecamatanController::class);
 });

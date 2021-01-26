@@ -13,15 +13,27 @@
             <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-speedometer')}}"></use>
         </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
     <li class="c-sidebar-nav-title">Data Master</li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin/provinsi')}}">
-        <svg class="c-sidebar-nav-icon">
-            <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
-        </svg> Provinsi</a></li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="{{url('/admin/provinsi')}}">
+            <svg class="c-sidebar-nav-icon">
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
+            </svg> Provinsi
+        </a>
+    </li>
     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin/kota')}}">
-        <svg class="c-sidebar-nav-icon">
-            <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-pencil')}}"></use>
-        </svg> Kota</a></li>
-    <li class="c-sidebar-nav-title">Components</li>
+            <svg class="c-sidebar-nav-icon">
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-pencil')}}"></use>
+            </svg> Kota / Kabupaten
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link" href="{{url('/admin/kecamatan')}}">
+            <svg class="c-sidebar-nav-icon">
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
+            </svg> Kecamatan
+        </a>
+    </li>
+    <li class="c-sidebar-nav-title">Data Laporan</li>
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
         <svg class="c-sidebar-nav-icon">
             <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-puzzle')}}"></use>

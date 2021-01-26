@@ -15,7 +15,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('assets/favicon/apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{asset('assets/favicon/apple-icon-60x60.png')}}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{asset('assets/favicon/apple-icon-72x72.png')}}">
@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{asset('assets/favicon/favicon-96x96.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/favicon/favicon-16x16.png')}}">
-    <link rel="manifest" href="{{asset('assets/favicon/manifest.json">
+    <link rel="manifest" href="{{asset('assets/favicon/manifest.json')}}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
@@ -61,6 +61,7 @@
     {{-- end header --}}
       <div class="c-body">
         <main class="c-main">
+            @include('layouts._flash')
             @yield('content')
         </main>
         {{-- footer --}}
@@ -77,7 +78,5 @@
     <script src="{{asset('assets/vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js')}}"></script>
     <script src="{{asset('assets/vendors/@coreui/utils/js/coreui-utils.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
-
-
   </body>
 </html>
