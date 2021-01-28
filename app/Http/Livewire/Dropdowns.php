@@ -8,7 +8,6 @@ use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Kelurahan;
 use App\Models\Rw;
-use App\Models\Kasus;
 
 class Dropdowns extends Component
 {
@@ -58,26 +57,16 @@ class Dropdowns extends Component
     public function updatedSelectedProvinsi($provinsi)
     {
         $this->kotas = Kota::where('id_provinsi', $provinsi)->get();
-        // $this->selectedKota = null;
-        // $this->selectedKecamatan = null;
-        // $this->selectedKelurahan = null;
-        // $this->selectedRw = null;
     }
 
     public function updatedSelectedKota($kota)
     {
         $this->kecamatans = Kecamatan::where('id_kota', $kota)->get();
-        // $this->selectedKecamatan = null;
-        // $this->selectedKelurahan = null;
-        // $this->selectedRw = null;
     }
 
     public function updatedSelectedKecamatan($kecamatan)
     {
         $this->kelurahans = Kelurahan::where('id_kecamatan', $kecamatan)->get();
-        // $this->selectedKelurahan = null;
-        // $this->selectedRw = null;
-
     }
 
     public function updatedSelectedKelurahan($kelurahan)
