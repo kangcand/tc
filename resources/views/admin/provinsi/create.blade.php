@@ -10,11 +10,21 @@
                 <div class="card-body">
                     <form action="{{route('provinsi.store')}}" method="post">
                         @csrf
-                        <div class="form-group">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <div class="form-group @error('kode_provinsi') is-invalid @enderror">
                             <label for="">Kode Provinsi</label>
                             <input type="text" name="kode_provinsi" class="form-control" required>
                         </div>
-                        <div class="form-group">
+
+                        <div class="form-group @error('nama_provinsi') is-invalid @enderror">
                             <label for="">Nama Provinsi</label>
                             <input type="text" name="nama_provinsi" class="form-control" required>
                         </div>

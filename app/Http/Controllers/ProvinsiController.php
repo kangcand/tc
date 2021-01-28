@@ -20,13 +20,18 @@ class ProvinsiController extends Controller
 
     public function store(Request $request)
     {
+
+        $validated = $request->validate([
+            'kode_provinsi' => 'required|unique:provinsis',
+            'nama_provinsi' => 'required',
+        ]);
+
         $provinsi = new Provinsi();
         $provinsi->kode_provinsi = $request->kode_provinsi;
         $provinsi->nama_provinsi = $request->nama_provinsi;
         $provinsi->save();
         return redirect()->route('provinsi.index')
-                ->with(['success'=>'Data <b>',$provinsi->nama_provinsi,
-                '</b> berhasil di input']);
+                ->with(['success'=>'Data berhasil di input']);
     }
 
     public function show($id)
@@ -45,6 +50,11 @@ class ProvinsiController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validated = $request->validate([
+            'kode_provinsi' => 'required',
+            'nama_provinsi' => 'required',
+        ]);
+
         $provinsi = Provinsi::findOrFail($id);
         $provinsi->kode_provinsi = $request->kode_provinsi;
         $provinsi->nama_provinsi = $request->nama_provinsi;

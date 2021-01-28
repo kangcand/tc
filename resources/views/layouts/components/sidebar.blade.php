@@ -8,35 +8,52 @@
     </svg>
     </div>
     <ul class="c-sidebar-nav">
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin')}}">
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/')) ? 'c-active' : '' }}" href="{{url('/admin')}}">
         <svg class="c-sidebar-nav-icon">
             <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-speedometer')}}"></use>
         </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
     <li class="c-sidebar-nav-title">Data Master</li>
     <li class="c-sidebar-nav-item">
-        <a class="c-sidebar-nav-link" href="{{url('/admin/provinsi')}}">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/provinsi*')) ? 'c-active' : '' }}" href="{{url('/admin/provinsi')}}">
             <svg class="c-sidebar-nav-icon">
-                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-blur')}}"></use>
             </svg> Provinsi
         </a>
     </li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin/kota')}}">
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/kota*')) ? 'c-active' : '' }}" href="{{url('/admin/kota')}}">
             <svg class="c-sidebar-nav-icon">
-                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-pencil')}}"></use>
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-blur-circular')}}"></use>
             </svg> Kota / Kabupaten
         </a>
     </li>
     <li class="c-sidebar-nav-item">
-        <a class="c-sidebar-nav-link" href="{{url('/admin/kecamatan')}}">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/kecamatan*')) ? 'c-active' : '' }}" href="{{url('/admin/kecamatan')}}">
             <svg class="c-sidebar-nav-icon">
-                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-blur-linear')}}"></use>
             </svg> Kecamatan
         </a>
     </li>
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{url('/admin/kelurahan')}}">
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/kelurahan*')) ? 'c-active' : '' }}" href="{{url('/admin/kelurahan')}}">
             <svg class="c-sidebar-nav-icon">
-                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-pencil')}}"></use>
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-clear-all')}}"></use>
             </svg> Kelurahan
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/rw*')) ? 'c-active' : '' }}" href="{{route('rw.index')}}">
+            <svg class="c-sidebar-nav-icon">
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-drop')}}"></use>
+            </svg> Rukun Warga
+        </a>
+    </li>
+    <li class="c-sidebar-nav-item">
+        <a class="c-sidebar-nav-link {{ (request()->is('admin/kasus*')) ? 'c-active' : '' }}" href="{{route('kasus.index')}}">
+            <svg class="c-sidebar-nav-icon">
+                <use xlink:href="{{asset('assets/vendors/@coreui/icons/svg/free.svg#cil-3d')}}"></use>
+            </svg> Kasus
         </a>
     </li>
     <li class="c-sidebar-nav-title">Data Laporan</li>

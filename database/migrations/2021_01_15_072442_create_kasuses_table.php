@@ -16,6 +16,7 @@ class CreateKasusesTable extends Migration
         Schema::create('kasuses', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('id_rw');
+            $table->integer('reaktif');
             $table->integer('positif');
             $table->integer('sembuh');
             $table->integer('meninggal');
