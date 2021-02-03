@@ -9,11 +9,11 @@ class Kasus extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id_rw','positif','sembuh','meninggal','tanggal'];
+    protected $fillable = ['id_rw','reaktif','positif','sembuh','meninggal','tanggal'];
     public $timestamps = true;
 
     public function rw()
     {
-        return $this->BelongsTo('App\Models\Rw','id_rw');
+        return $this->belongsTo('App\Models\Rw','id_rw');
     }
 }

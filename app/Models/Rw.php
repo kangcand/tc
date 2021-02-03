@@ -19,6 +19,8 @@ class Rw extends Model
 
     public function kasus()
     {
-        return $this->hasMany('App/Models/Kasus','id_rw');
+        return $this->hasMany('App\Models\Kasus','id_rw');
     }
+
+
 }
