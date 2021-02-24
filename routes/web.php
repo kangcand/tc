@@ -7,10 +7,11 @@ use App\Http\Controllers\KecamatanController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\RwController;
 use App\Http\Controllers\KasusController;
+use App\Http\Controllers\FrontController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[FrontController::class,'index']);
+Route::get('/provinsi/{id}',[FrontController::class,'getKotaProvinsi']);
+Route::get('/kota/{id}',[FrontController::class,'getKecamatanKota']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes(['register'=>false]);
