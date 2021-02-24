@@ -9,7 +9,8 @@
         </li>
         <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#" style="font-size: 20px;">Tentang </a>
         </li>
-        <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#" style="font-size: 20px;">Kontak</a>
+        <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#" style="font-size: 20px;">Kontak
+                Kami</a>
         </li>
     </ul>
 
