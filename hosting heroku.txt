@@ -1,0 +1,55 @@
+1. install & sign up heroku
+
+2. buka terminal/gitbash di path project
+
+3. heroku login
+
+4. heroku create
+
+5. buka project tambahkan file baru yang
+   namanya Procfile
+   isinya :
+   web: vendor/bin/heroku-php-apache2 public/
+
+6. buka terminal / gitbash ketik perintah :
+   git init (belum terhubung ke github)
+   git add .
+   git commit -m "pesan"
+   git push heroku master
+
+7. set up database di heroku :
+   klik resource di dashboard
+   search heroku postgres
+   kemudian submit
+   klik heroku postgres di add on
+   kemudian pilih settings -> credentials
+   kemudian copy configurasi DB dari .env ke reveal config dibagian settings dashboard heroku
+   isinya menyesuaikan dengan settingan dari pgsql dari heroku
+
+8. buka terminal ketik perintah :
+   heroku run bash
+   php artisan migrate atau
+   php artisan migrate --seed (jika ada sample data)
+   exit
+
+9. ganti nama project heroku
+   klik setting -> ganti namanya
+   buka terminal / gitbash ketik perintah:
+   heroku git:remote -a namaprojekheroku
+
+10. menghubungkan github dengan heroku
+    klik deploy di bagian dashboard
+    klik github (login github)
+    pilih repo project github kalian
+    klik connect
+    klik button enable automatic deploy
+
+11. rubah branch master ke main
+    buka terminal kemudian ketik perintah :
+    git branch -M main
+
+12. setiap kali ada perubahan yang sudah dikerjakan cukup di push dengan perintah :
+    git add .
+    git commit -m"pesan"
+    git push origin main
+
