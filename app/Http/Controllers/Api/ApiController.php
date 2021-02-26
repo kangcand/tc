@@ -48,11 +48,11 @@ class ApiController extends Controller
         $meninggal = DB::table('kasuses')
             ->sum('kasuses.meninggal');
 
-        $this->data = [[
+        $this->data = [
             'name' => 'Indonesia',
             'positif' => $positif,
             'sembuh' => $sembuh,
-            'meninggal' => $meninggal],
+            'meninggal' => $meninggal,
         ];
 
         $data = [
