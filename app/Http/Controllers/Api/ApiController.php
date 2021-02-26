@@ -48,11 +48,11 @@ class ApiController extends Controller
         $meninggal = DB::table('kasuses')
             ->sum('kasuses.meninggal');
 
-        $this->data = [
+        $this->data = [[
             'name' => 'Indonesia',
             'positif' => $positif,
             'sembuh' => $sembuh,
-            'meninggal' => $meninggal,
+            'meninggal' => $meninggal],
         ];
 
         $data = [
@@ -215,9 +215,9 @@ class ApiController extends Controller
             ->select('kasuses.positif')
             ->sum('kasuses.positif');
         // dd($positif);
-        $this->data = [
+        $this->data = [[
             'name' => 'Total Positif',
-            'value' => $positif,
+            'value' => $positif],
         ];
 
         $data = [
@@ -234,9 +234,9 @@ class ApiController extends Controller
             ->select('kasuses.sembuh')
             ->sum('kasuses.sembuh');
         // dd($sembuh);
-        $this->data = [
+        $this->data = [[
             'name' => 'Total Sembuh',
-            'value' => $sembuh,
+            'value' => $sembuh],
         ];
 
         $data = [
@@ -253,9 +253,9 @@ class ApiController extends Controller
         // ->select('kasuses.meninggal')
             ->sum('kasuses.meninggal');
         // dd($meninggal);
-        $this->data = [
+        $this->data = [[
             'name' => 'Total Meninggal',
-            'value' => $meninggal,
+            'value' => $meninggal],
         ];
 
         $data = [
