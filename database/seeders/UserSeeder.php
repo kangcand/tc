@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Seeder;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -17,6 +18,15 @@ class UserSeeder extends Seeder
         $user->name = "Candra";
         $user->email = "candraherdiansyah14@gmail.com";
         $user->password = bcrypt('12345678');
+        $user->role = "Admin";
         $user->save();
+
+        $user = new User();
+        $user->name = "Petugas";
+        $user->email = "petugas@gmail.com";
+        $user->password = bcrypt('12345678');
+        $user->role = "Petugas";
+        $user->save();
+
     }
 }
