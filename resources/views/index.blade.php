@@ -151,7 +151,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @php $no=1; @endphp
+                                    @php $no=1; @endphp
                                     @foreach ($global as $data => $val)
                                         <tr>
                                             <td>{{ $no++ }}</td>
@@ -160,7 +160,7 @@
                                             <td>{{ $val['attributes']['Recovered'] }}</td>
                                             <td>{{ $val['attributes']['Deaths'] }}</td>
                                         </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

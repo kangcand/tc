@@ -11,7 +11,7 @@ class FrontController extends Controller
 {
     public function index()
     {
-        // $global = Http::get('https://api.kawalcorona.com/')->json();
+        $global = Http::get('https://api.kawalcorona.com/')->json();
         $positif = DB::table('kasuses')
             ->sum('kasuses.positif');
 
@@ -61,7 +61,7 @@ class FrontController extends Controller
         // $casesChart = json_decode($casesChart);
         // dd(($casesTanggal));
 
-        return view('index', compact('provinsi', 'sembuh', 'meninggal', 'positif', 'casesSembuh', 'casesPositif', 'casesMeninggal', 'casesTanggal'));
+        return view('index', compact('provinsi', 'sembuh', 'meninggal', 'positif', 'global', 'casesSembuh', 'casesPositif', 'casesMeninggal', 'casesTanggal'));
     }
 
     public function about()
