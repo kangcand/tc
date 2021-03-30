@@ -44,8 +44,11 @@
                                                         class="btn btn-success">Edit</a>
                                                     <a href="{{ route('users.show', $data->id) }}"
                                                         class="btn btn-warning">Show</a>
+                                                    @if($data->role == "Admin")
+                                                    @else
                                                     <button type="submit" class="btn btn-danger"
                                                         onclick="return confirm('apakah anda yakin ?')">Delete</button>
+                                                    @endif
                                                 </form>
                                             </td>
                                         </tr>
